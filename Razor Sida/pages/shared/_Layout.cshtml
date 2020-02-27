@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+        <title>@ViewData["Title"]</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="images/logo.png" id="logo">
+
+            <div class="date">
+                Dagens Datum är: @DateTime.Now.ToShortDateString()
+            </div>
+
+            <hr>
+
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="/"> Startsidan</a></li>
+                        <li><a href="/Razor"> Razor </a></li>
+                        <li><a href="/about"> Om Sidan </a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+
+            <main>
+                @RenderBody()
+            </main>
+
+            <footer>
+                <p>
+                Av John Emericks - Kontakta mig via e-post: <a href="mailto:john@emericks.com" id="mail">john@emericks.com</a>
+                </p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body> 
+</html>
